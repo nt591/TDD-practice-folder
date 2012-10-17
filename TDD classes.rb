@@ -78,7 +78,7 @@ end
 # end
 
 def find_songs(library, song_search)
-  library.songs.map {|song| return [song] if song.name == song_search}
+  library.songs.detect {|song| return [song] if song.name == song_search}
 end
 
 
