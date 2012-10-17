@@ -93,9 +93,7 @@ end
 # end
 
 def search_songs(library, search_string)
-  array_of_songs = []
-  library.songs.map{ |song| array_of_songs << song if song.name.include?(search_string) } 
-  return array_of_songs
+  library.songs.select{ |song| song.name.include?(search_string) } 
 end
 
 begin
